@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  height: 100vh;
+  background-color: var(--light-blue);
+}
+
+
+.container {
+  flex-grow: 1;
+  padding: 2em;
+  background-color: var(--light-blue);
+  flex-direction: column;
+
+}
+
+
+.page {
+  width: 75%;
+  position: absolute;
+  top: 80px;
+  left: 350px;
+  background-color: var(--light-blue);
+  padding: 30px;
+
+}

@@ -1,0 +1,39 @@
+.setting {
+
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    border: none;
+    background-color: #fff;
+    z-index: 5;
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.setting-icon {
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.setting-icon::before {
+    content: "";
+ 
+ display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+}
+
+.setting-icon:hover .setting-icon::before {
+    color: var(--primary-color);
+}
