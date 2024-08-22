@@ -1,6 +1,6 @@
 
 
-let links = [
+ let links = [
     {
         
         title: "Dashboards",
@@ -13,20 +13,21 @@ let links = [
                 title: "-Default",
                 icon: "-",
                 path : 'dashboard/default',
+                component :'Default',
              
             },
             {
                 title: "-Ecommerce",
                 icon: "-",
                 path:'dashboard/ecommerce',
-              
+                component :'Ecommerce',
                
             },
             {
                 title:  "-Crypto",
                 icon: "-",
-                path : 'dashboard/crypto'
-             
+                path : 'dashboard/crypto',
+                component :'Crypto',
             }
         ]
     },
@@ -162,4 +163,92 @@ let links = [
     },
    
 ]
-export default links
+
+ const lineChartsData = [
+    {
+      name: "Page A",
+      sum: 4000,
+     
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      sum: 3000,
+     
+      amt: 2210,
+    },
+    {
+      name: "Page C",
+      sum: 2000,
+    
+      amt: 2290,
+    },
+    {
+      name: "Page D",
+      sum: 2780,
+     
+      amt: 2000,
+    },
+    {
+      name: "Page E",
+      sum: 1890,
+     
+      amt: 2181,
+    },
+    {
+      name: "Page F",
+      sum: 2390,
+     
+      amt: 2500,
+    },
+    {
+      name: "Page G",
+      sum: 3490,
+     
+      amt: 2100,
+    },
+  ];
+  const barChartsData = [
+    {
+      name: "M",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+      percent : 0,
+    },
+    {
+      name: "S",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+      percent : 33,
+    },
+    {
+      name: "T",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+      percent : 66
+    },
+    {
+      name: "W",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+      percent : 100
+    },
+    {
+      name: "T",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "F",
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+ 
+  ];
+  export {lineChartsData , links,barChartsData}

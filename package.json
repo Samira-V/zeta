@@ -12,11 +12,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ag-charts-react": "^10.0.2",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-pick-color": "^2.0.0",
+    "recharts": "^2.12.7",
     "use-local-storage": "^3.0.0"
   },
   "devDependencies": {

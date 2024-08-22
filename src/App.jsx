@@ -4,36 +4,33 @@ import './App.css'
 
 
 // import ColorPicker from 'react-pick-color';
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import Topbar from './Components/Topbar/Topbar'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Widgets from './pages/Widgets/Widgets'
 import Projects from './pages/Projects/Projects'
-import FileManager from './pages/FileManager/FileManager'
+
 import PageLayout from './pages/PageLayout/PageLayout'
 
 import Setting from './Components/Setting/Setting'
+import Default from './pages/Dashboard/Default'
+import General from './pages/Widgets/General'
+import Ecommerce from './pages/Dashboard/Ecommerce'
+import Crypto from './pages/Dashboard/Crypto'
 
 
 
 
 function App() {
-  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  // console.log(defaultDark)
-  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
-  // console.log(theme)
-  // const switchTheme = () => {
-  //   const newTheme = 'light' ? 'dark' : 'light';
-  //   console.log(newTheme)
-  //   setTheme(newTheme)
-  // }
-  const location = useLocation()
-  const currentRoute = location.pathname
-  console.log(currentRoute)
+
+ 
   return (
     <>
       <div className="main" >
+        <div className="sidebarContent">
         <Sidebar />
+
+        </div>
         <div className='container'>
           <Topbar />
           <Setting >
@@ -41,10 +38,16 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Dashboard />}/>
+            <Route path='/dashboard/default' element={<Default />}/>
+            <Route path='/dashboard/ecommerce' element={<Ecommerce />}/>
+            <Route path='/dashboard/crypto' element={<Crypto />}/>
+
             <Route path='/widgets' element={<Widgets />} />
+            <Route path='/widgets/general' element={<General />} />
+           
             <Route path='/pagelayout' element={<PageLayout />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/filemanager' element={<FileManager />} />
+            <Route path='/project' element={<Projects />} />
+           
           </Routes>
         </div>
 

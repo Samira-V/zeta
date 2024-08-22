@@ -27,7 +27,7 @@ export default function Dashboard() {
             <h4 className="title p-0">File Manager</h4>
           </div>
           {/* breadcrumb  */}
-          <BreadCrumb/>
+        
         </div>
         <div className="main-header-bottom">
           <Button variant="contained" href="#" className="btn">File Filter</Button>

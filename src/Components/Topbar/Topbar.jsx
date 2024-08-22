@@ -35,20 +35,20 @@ export default function Topbar(props) {
 
 
 
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorel, setAnchorel] = useState(null);
   const [anchorNotification, setAnchorNotification] = useState(false);
   const [isOpenShoppingDrop, setIsOpenShoppingDrop] = useState(false);
   const [count, setCount] = useState(1)
-  const openMyAcc = Boolean(anchorEl);
+  const openMyAcc = Boolean(anchorel);
   const openNotification = Boolean(anchorNotification);
   const openShoppingDrop = Boolean(isOpenShoppingDrop);
 
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorel(event.currentTarget);
   };
   const handleClose = () => {
-    setAnchorEl(null);
+    setAnchorel(null);
   };
   const handleNotificationClose = () => {
     setAnchorNotification(false);
@@ -279,7 +279,7 @@ console.log('full')
           </div>
 
           <Menu
-            anchorE1={anchorNotification}
+            anchore1={anchorNotification}
             className='notification dropdown-box'
             id="notification"
             open={openNotification}
@@ -429,7 +429,7 @@ console.log('full')
           </Button>
         </Stack>
         <Menu
-          anchorEl={anchorEl}
+          anchorel={anchorel}
 
           id="account-menu"
           open={openMyAcc}

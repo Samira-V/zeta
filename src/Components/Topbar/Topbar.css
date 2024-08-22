@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 5;
     flex-direction: row;
-    position: fixed;
+
     top: 0;
     right: 0;
     width: calc(100% - 350px);
