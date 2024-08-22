@@ -39,21 +39,14 @@ export default function Default() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-
-
-     fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(users => {
-      
-        setUsers(users)})
-
-
-
-
-
+        setUsers(users)
+      })
   }
 
-    , [])
+   ,[])
 
 
 
@@ -309,7 +302,7 @@ export default function Default() {
               </div>
             </div>
           </div>
-          {/* <div className="card col-lg-6">
+          <div className="card col-lg-6">
             <div className="card-body bg-white">
               <div className="top d-flex position-relative">
                 <h3 className='title'>Usres</h3>
@@ -355,42 +348,51 @@ export default function Default() {
 
               </div>
               <div className="project-list">
-                <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
+                <TableContainer component={Paper} className='mt-4'
+                >
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table" >
+                    <TableHead className='table-head'>
                       <TableRow>
-                        <TableCell align="right">Name</TableCell>
-                        <TableCell align="right">Phone</TableCell>
-                        <TableCell align="right">Email</TableCell>
-                        <TableCell align="right">Company</TableCell>
+                        <TableCell >Name</TableCell>
+                        <TableCell >Phone</TableCell>
+                        <TableCell >Email</TableCell>
+                        <TableCell >Address</TableCell>
 
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {users.map(user=> (
-                        <TableRow
+                      {users.map(user => (
+                        <tr
+
                           key={user.id}
                           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                          <TableCell component="th" >
-                            {user.name}
-                          </TableCell>
-                          <TableCell align="right">{user.phone}</TableCell>
-                          <TableCell align="right">{user.email}</TableCell>
-                          <TableCell align="right">{user.company}</TableCell>
+                          <td component="th" className='p-2 '
+                          >
+                            {user.username}
+                          </td>
+                          <td component="th" >
+                            {user.phone}
+                          </td>
+                          <td component="th" >
+                            {user.email}
+                          </td>
+                          <td component="th" >
+                              {user.address.zipcode}
+                          </td>
 
-                        </TableRow>
+
+                        </tr>
                       ))}
                     </TableBody>
                   </Table>
                 </TableContainer>
               </div>
             </div>
-            </div> */}
           </div>
         </div>
       </div>
-    
-
+    </div>
   )
 }
+
