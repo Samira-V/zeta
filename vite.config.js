@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
     build: {
     rollupOptions: {
-      external: ['react-router-dom','@mui/material/Button',react-icons/md]
+      external: ['react-router-dom','@mui/material/Button','react-icons/md']
     }
 }
 })
